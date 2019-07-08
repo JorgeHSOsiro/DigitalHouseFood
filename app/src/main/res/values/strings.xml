@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Digital House Food</string>
+    <string name="nome">Novo App</string>
+    <string name="about">Sobre</string>
+    <string name="title_activity_home">Digital House Food</string>
+    <string name="title_activity_register">Cadastro</string>
+    <string name="action_settings">Perfil</string>
 </resources>
