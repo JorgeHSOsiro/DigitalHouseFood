@@ -49,19 +49,19 @@ public class LoginActivity extends AppCompatActivity {
         String emailDigitado = emailEditText.getEditableText().toString();
         String senhaDigitada = senhaEditText.getEditableText().toString();
 
-        emailEditText.setError(null);
-        senhaEditText.setError(null);
-        if(emailDigitado.equals("joji@gmail.com")&& senhaDigitada.equals("12345")){
+//        emailEditText.setError(null);
+//        senhaEditText.setError(null);
+//        if(emailDigitado.equals("joji@gmail.com")&& senhaDigitada.equals("12345")){
             Intent intent = new Intent(this, HomeActivity.class);
-
-            Bundle bundle = new Bundle();
-            bundle.putString("EMAIL",emailDigitado);
-            intent.putExtras(bundle);
+//
+//            Bundle bundle = new Bundle();
+//            bundle.putString("EMAIL",emailDigitado);
+//            intent.putExtras(bundle);
             startActivity(intent);
-        }else{
-            emailEditText.setError("Usuario e/ou senha incorretos");
-            senhaEditText.setError("Usuario e/ou senha incorretos");
-        }
+//        }else{
+//            emailEditText.setError("Usuario e/ou senha incorretos");
+//            senhaEditText.setError("Usuario e/ou senha incorretos");
+//        }
 
     }
 }

@@ -10,6 +10,7 @@
     tools:showIn="@layout/activity_home">
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/restaurante_recycler_view"
         android:layout_width="395dp"
         android:layout_height="659dp"
         android:layout_marginStart="8dp"
