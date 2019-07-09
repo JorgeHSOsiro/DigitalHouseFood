@@ -1,8 +1,10 @@
 package com.example.digitalhousefood;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.example.digitalhousefood.adapter.RestauranteAdapter;
+import com.example.digitalhousefood.interfaces.RestauranteListener;
 import com.example.digitalhousefood.model.Restaurante;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,7 +18,7 @@ import android.view.MenuItem;
 import java.util.ArrayList;
 import java.util.List;
 
-public class HomeActivity extends AppCompatActivity {
+public class HomeActivity extends AppCompatActivity implements RestauranteListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,7 +57,7 @@ public class HomeActivity extends AppCompatActivity {
         restaurante4.setFotoRestaurante("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2012/10/Food.jpg");
         listaDeRestaurantes.add(restaurante4);
 
-        RestauranteAdapter restauranteAdapter = new RestauranteAdapter(listaDeRestaurantes);
+        RestauranteAdapter restauranteAdapter = new RestauranteAdapter(listaDeRestaurantes, this);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
         RecyclerView recyclerView = findViewById(R.id.restaurante_recycler_view);
         recyclerView.setAdapter(restauranteAdapter);
@@ -81,5 +83,18 @@ public class HomeActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onRestauranteClicado(Restaurante restaurante) {
+
+        Intent intent = new Intent(this, RestauranteCardapioActivity.class);
+
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("RESTAURANTE",restaurante);
+
+        intent.putExtras(bundle);
+        startActivity(intent);
+
     }
 }

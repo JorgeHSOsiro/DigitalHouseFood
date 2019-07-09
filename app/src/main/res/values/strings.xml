@@ -5,4 +5,7 @@
     <string name="title_activity_home">Digital House Food</string>
     <string name="title_activity_register">Cadastro</string>
     <string name="action_settings">Perfil</string>
+    <string name="loren_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed blandit quam eget enim gravida interdum. Phasellus efficitur sed elit congue aliquet. Duis ornare elit at sagittis tempor. Nulla facilisi. Duis sed sagittis orci. Sed mollis dictum lorem non euismod. Mauris quis nisi tempor, interdum tellus quis, auctor justo. Pellentesque maximus, elit et posuere imperdiet, metus dui laoreet massa, in venenatis erat ante quis libero. Integer id odio nec velit ultrices aliquam nec eget est. Vestibulum risus lacus, consequat vitae massa at, mattis elementum justo. Donec vel ex semper, dictum neque ac, imperdiet nulla. Quisque in massa risus. Donec neque quam, tempor ut est vel, fermentum ullamcorper sapien.
+
+Morbi sit amet nibh egestas nisi pellentesque feugiat. Aenean fringilla sed arcu luctus commodo. Sed viverra consequat euismod. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque pharetra, dui id fringilla elementum, tellus nisl aliquam felis, eu tempor nibh nunc id turpis. Phasellus maximus est sit amet mi sodales, sed volutpat libero porta. Quisque dignissim vel neque eget blandit.</string>
 </resources>

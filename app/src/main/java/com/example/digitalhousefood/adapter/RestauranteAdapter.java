@@ -10,6 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.digitalhousefood.R;
+import com.example.digitalhousefood.interfaces.RestauranteListener;
 import com.example.digitalhousefood.model.Restaurante;
 import com.squareup.picasso.Picasso;
 
@@ -18,9 +19,11 @@ import java.util.List;
 public class RestauranteAdapter extends RecyclerView.Adapter<RestauranteAdapter.ViewHolder> {
 
     private List<Restaurante> listaDeRestaurantes;
+    private RestauranteListener restauranteListener;
 
-    public RestauranteAdapter(List<Restaurante> listaDeRestaurantes) {
+    public RestauranteAdapter(List<Restaurante> listaDeRestaurantes, RestauranteListener restauranteListener) {
         this.listaDeRestaurantes = listaDeRestaurantes;
+        this.restauranteListener = restauranteListener;
     }
 
 
@@ -33,8 +36,15 @@ public class RestauranteAdapter extends RecyclerView.Adapter<RestauranteAdapter.
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
-        Restaurante restaurante = listaDeRestaurantes.get(i);
+        final Restaurante restaurante = listaDeRestaurantes.get(i);
         viewHolder.setupRestaurante(restaurante);
+
+        viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                restauranteListener.onRestauranteClicado(restaurante);
+            }
+        });
 
     }
 
