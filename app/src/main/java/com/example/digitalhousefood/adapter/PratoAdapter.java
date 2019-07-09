@@ -10,6 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.digitalhousefood.R;
+import com.example.digitalhousefood.interfaces.PratoListener;
 import com.example.digitalhousefood.model.Prato;
 import com.squareup.picasso.Picasso;
 
@@ -18,9 +19,11 @@ import java.util.List;
 public class PratoAdapter extends RecyclerView.Adapter<PratoAdapter.ViewHolder> {
 
     private List<Prato> listaDePratos;
+    private PratoListener pratoListener;
 
-    public PratoAdapter(List<Prato> listaDePratos) {
+    public PratoAdapter(List<Prato> listaDePratos, PratoListener pratoListener) {
         this.listaDePratos = listaDePratos;
+        this.pratoListener = pratoListener;
     }
 
 
@@ -33,8 +36,15 @@ public class PratoAdapter extends RecyclerView.Adapter<PratoAdapter.ViewHolder> 
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
-        Prato prato = listaDePratos.get(i);
+        final Prato prato = listaDePratos.get(i);
         viewHolder.setupPrato(prato);
+
+        viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                pratoListener.onPratoClicado(prato);
+            }
+        });
 
     }
 

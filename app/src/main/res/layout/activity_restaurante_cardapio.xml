@@ -9,7 +9,7 @@
     <ImageView
         android:id="@+id/foto_restaurante_detalhes_image_view"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="230dp"
         app:layout_constraintBottom_toTopOf="@+id/titulo_cardapio_text_view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,6 +21,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
+        android:layout_marginBottom="16dp"
         android:text="TextView"
         android:textSize="24sp"
         android:textColor="@color/branco"
@@ -38,16 +39,6 @@
         app:layout_constraintBottom_toTopOf="@+id/scrollView2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/foto_restaurante_detalhes_image_view" />
-
-    <ImageButton
-        android:id="@+id/cardapio_voltar_image_button"
-        android:layout_width="15dp"
-        android:layout_height="15dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintStart_toStartOf="@+id/foto_restaurante_detalhes_image_view"
-        app:layout_constraintTop_toTopOf="@+id/foto_restaurante_detalhes_image_view"
-        app:srcCompat="@drawable/button_voltar" />
 
     <ScrollView
         android:id="@+id/scrollView2"
@@ -74,5 +65,16 @@
                 android:layout_marginBottom="350dp" />
         </LinearLayout>
     </ScrollView>
+
+    <ImageButton
+        android:id="@+id/cardapio_voltar_image_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:tint="@color/branco"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/foto_restaurante_detalhes_image_view"
+        app:srcCompat="?attr/actionModeCloseDrawable" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

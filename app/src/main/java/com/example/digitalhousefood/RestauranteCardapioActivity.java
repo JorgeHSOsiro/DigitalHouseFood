@@ -12,6 +12,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.digitalhousefood.adapter.PratoAdapter;
+import com.example.digitalhousefood.interfaces.PratoListener;
 import com.example.digitalhousefood.model.Prato;
 import com.example.digitalhousefood.model.Restaurante;
 import com.squareup.picasso.Picasso;
@@ -19,7 +20,7 @@ import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RestauranteCardapioActivity extends AppCompatActivity {
+public class RestauranteCardapioActivity extends AppCompatActivity implements PratoListener {
 
     private TextView nomeRestauranteTextView;
     private ImageView fotoRestauranteImageView;
@@ -29,6 +30,7 @@ public class RestauranteCardapioActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_restaurante_cardapio);
+
 
         Intent intent = getIntent();
         Bundle bundle = intent.getExtras();
@@ -50,7 +52,7 @@ public class RestauranteCardapioActivity extends AppCompatActivity {
         listaDePratos.add(prato1);
         listaDePratos.add(prato1);listaDePratos.add(prato1);listaDePratos.add(prato1);listaDePratos.add(prato1);listaDePratos.add(prato1);
 
-        PratoAdapter pratoAdapter = new PratoAdapter(listaDePratos);
+        PratoAdapter pratoAdapter = new PratoAdapter(listaDePratos, this);
 
         RecyclerView.LayoutManager layoutManager = new GridLayoutManager(this,2);
         RecyclerView recyclerView = findViewById(R.id.cardapio_recycler_view);
@@ -71,5 +73,15 @@ public class RestauranteCardapioActivity extends AppCompatActivity {
     private void voltarParaHome() {
         Intent intent1 = new Intent(this, HomeActivity.class);
         startActivity(intent1);
+    }
+
+    @Override
+    public void onPratoClicado(Prato prato) {
+        Intent intent = new Intent(this, DescricaoPratoActivity.class);
+
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("PRATO", prato);
+        intent.putExtras(bundle);
+        startActivity(intent);
     }
 }

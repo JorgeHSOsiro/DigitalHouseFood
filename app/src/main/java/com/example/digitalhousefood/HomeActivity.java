@@ -33,7 +33,7 @@ public class HomeActivity extends AppCompatActivity implements RestauranteListen
         restaurante1.setNomeRestaurante("Tony Roma's");
         restaurante1.setEnderecoRestaurante("Av. Lavandisca,717 - Indianopolis, Sao Paulo");
         restaurante1.setHorarioRestaurante("Fecha as 22:30 ");
-        restaurante1.setFotoRestaurante("https://img.sndimg.com/food/image/upload/fl_progressive,c_fill,q_80,h_349,w_621/v1/img/recipes/24/96/WnJFBuTMQEj2PNZ1hLwg_batch23-7154.jpg");
+        restaurante1.setFotoRestaurante("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2012/10/Food.jpg");
         listaDeRestaurantes.add(restaurante1);
 
         Restaurante restaurante2 = new Restaurante();

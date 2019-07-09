@@ -1,6 +1,8 @@
 package com.example.digitalhousefood.model;
 
-public class Prato {
+import java.io.Serializable;
+
+public class Prato implements Serializable {
     private String fotoPrato;
     private String nomePrato;
     private String descricaoPrato;
