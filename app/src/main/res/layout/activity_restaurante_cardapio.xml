@@ -9,7 +9,7 @@
     <ImageView
         android:id="@+id/foto_restaurante_detalhes_image_view"
         android:layout_width="0dp"
-        android:layout_height="230dp"
+        android:layout_height="225dp"
         app:layout_constraintBottom_toTopOf="@+id/titulo_cardapio_text_view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

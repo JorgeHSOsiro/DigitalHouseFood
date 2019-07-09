@@ -40,7 +40,7 @@ public class HomeActivity extends AppCompatActivity implements RestauranteListen
         restaurante2.setNomeRestaurante("Aoyama - Moema");
         restaurante2.setEnderecoRestaurante("Alameda dos Arapanes,532 - Moema Sao Paulo");
         restaurante2.setHorarioRestaurante("Fecha as 00:00 ");
-        restaurante2.setFotoRestaurante("https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/12/19/18/sush0istock-gkrphoto.jpg?w968");
+        restaurante2.setFotoRestaurante("https://www.jornalspnorte.com.br/enviados/2018/12/141218_aoyama-2.jpg");
         listaDeRestaurantes.add(restaurante2);
 
         Restaurante restaurante3 = new Restaurante();
