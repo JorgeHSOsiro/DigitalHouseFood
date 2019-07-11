@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import com.google.android.material.textfield.TextInputEditText;
 
@@ -15,6 +16,7 @@ public class RegisterActivity extends AppCompatActivity {
     private TextInputEditText senhaEditText;
     private TextInputEditText confirmarSenhaEditText;
     private Button confirmarButton;
+    private ImageButton voltarButton;
     private String emailRegex = "^[\\w-_\\.+]*[\\w-_\\.]\\@([\\w]+\\.)+[\\w]+[\\w]$";
 
     @Override
@@ -27,6 +29,7 @@ public class RegisterActivity extends AppCompatActivity {
         senhaEditText = findViewById(R.id.senha_cadastro_edit_text);
         confirmarSenhaEditText = findViewById(R.id.confirmar_senha_edit_text);
         confirmarButton = findViewById(R.id.confirmar_cadastro_button);
+        voltarButton = findViewById(R.id.voltar_register_image_button);
 
         confirmarButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -34,6 +37,21 @@ public class RegisterActivity extends AppCompatActivity {
                 irParaLogin();
             }
         });
+
+        voltarButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                voltarParaOutraTela();
+            }
+        });
+    }
+
+    private void voltarParaOutraTela() {
+        if (getFragmentManager().getBackStackEntryCount() == 0) {
+            this.finish();
+        } else {
+            getFragmentManager().popBackStack();
+        }
     }
 
     private void irParaLogin() {

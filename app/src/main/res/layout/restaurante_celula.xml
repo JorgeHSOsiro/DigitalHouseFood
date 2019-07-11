@@ -23,7 +23,6 @@
                 android:id="@+id/foto_restaurante_image_view"
                 android:layout_width="0dp"
                 android:layout_height="220dp"
-                android:layout_marginTop="0dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"

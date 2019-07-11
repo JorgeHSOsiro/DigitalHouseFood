@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -76,6 +77,9 @@ public class HomeActivity extends AppCompatActivity implements RestauranteListen
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
+
+        Intent intent = new Intent(this, RegisterActivity.class);
+        startActivity(intent);
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {

@@ -47,7 +47,11 @@ public class DescricaoPratoActivity extends AppCompatActivity {
     }
 
     private void irParaCardapio() {
-        Intent intent1 = new Intent(this, RestauranteCardapioActivity.class);
-        startActivity(intent1);
+
+        if (getFragmentManager().getBackStackEntryCount() == 0) {
+            this.finish();
+        } else {
+            getFragmentManager().popBackStack();
+        }
     }
 }

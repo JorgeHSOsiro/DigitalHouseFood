@@ -71,8 +71,11 @@ public class RestauranteCardapioActivity extends AppCompatActivity implements Pr
     }
 
     private void voltarParaHome() {
-        Intent intent1 = new Intent(this, HomeActivity.class);
-        startActivity(intent1);
+        if (getFragmentManager().getBackStackEntryCount() == 0) {
+            this.finish();
+        } else {
+            getFragmentManager().popBackStack();
+        }
     }
 
     @Override

@@ -17,6 +17,16 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_launcher_background" />
 
+    <ImageButton
+        android:id="@+id/desc_voltar_image_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:tint="@color/branco"
+        app:layout_constraintStart_toStartOf="@+id/foto_prato_desc_image_view"
+        app:layout_constraintTop_toTopOf="@+id/foto_prato_desc_image_view"
+        app:srcCompat="?attr/actionModeCloseDrawable" />
+
     <TextView
         android:id="@+id/nome_prato_desc_text_view"
         android:layout_width="wrap_content"
@@ -33,22 +43,11 @@
         android:id="@+id/decricao_prato_text_view"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/foto_prato_desc_image_view" />
 
-    <ImageButton
-        android:id="@+id/desc_voltar_image_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:tint="@color/branco"
-        app:layout_constraintStart_toStartOf="@+id/foto_prato_desc_image_view"
-        app:layout_constraintTop_toTopOf="@+id/foto_prato_desc_image_view"
-        app:srcCompat="?attr/actionModeCloseDrawable" />
 </androidx.constraintlayout.widget.ConstraintLayout>
