@@ -20,13 +20,28 @@
             android:background="?attr/colorPrimary"
             app:popupTheme="@style/AppTheme.PopupOverlay" />
 
-        <ImageButton
-            android:id="@+id/voltar_register_image_button"
-            android:layout_width="57dp"
-            android:layout_height="47dp"
-            android:background="@color/azul"
-            android:src="?attr/actionModeCloseDrawable"
-            android:tint="@color/branco" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageButton
+                android:id="@+id/voltar_register_image_button"
+                android:layout_width="57dp"
+                android:layout_height="47dp"
+                android:background="@color/azul"
+                android:src="?attr/actionModeCloseDrawable"
+                android:tint="@color/branco" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Register"
+                android:layout_gravity="center"
+                android:textSize="24dp"
+                android:textColor="@color/branco"/>
+        </LinearLayout>
+
+
 
     </com.google.android.material.appbar.AppBarLayout>
 
